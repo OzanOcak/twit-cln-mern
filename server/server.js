@@ -18,6 +18,7 @@ const connect = () => {
       throw err;
     });
 };
+app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);

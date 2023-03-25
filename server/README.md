@@ -36,3 +36,15 @@ first we need to signin with user so the access_token will be sent to client the
 curl -X DELETE http://localhost:8000/api/users/641dfdad4abad1400220e61
 
 ---
+
+first signin jane account then with access token follow a user
+
+curl -X PUT http://localhost:8000/api/users/follow/<jane id> -d '{"id":"<jack id>"}'
+
+---
+
+first sign in jane account and crab access token pass it in header with access-token key
+
+curl -X PUT http://localhost:8000/api/users/unfollow/<jane id> -d '{"id":"<jack id>
+
+---

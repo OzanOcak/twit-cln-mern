@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { handleError } from "../middleware/handleError.js";
 
 export const signup = async (req, res, next) => {
   try {

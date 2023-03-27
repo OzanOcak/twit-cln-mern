@@ -5,10 +5,13 @@ import userRoutes from "./routes/users.js";
 import authRoutes from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 import tweetRoutes from "./routes/tweet.js";
+import cors from "cors";
 
 const app = express();
 const PORT = 8000;
 dotenv.config();
+
+app.use(cors());
 
 const connect = () => {
   mongoose

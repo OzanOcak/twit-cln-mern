@@ -1,20 +1,28 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import { useDispatch } from "react-redux";
+import { loginStart, loginSuccess, loginFailed } from "../redux/userSlice";
+
 const Signin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
+
   const handleLogin = async (e) => {
     e.preventDefault();
+    dispatch(loginStart());
     try {
       const res = await axios.post("http://localhost:8000/api/auth/signin", {
         username,
         password,
       });
       console.log("res", res.data);
+      dispatch(loginSuccess(res.data));
     } catch (err) {
       console.log(err);
+      dispatch(loginFailed());
     }
   };
   return (

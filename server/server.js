@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import userRoutes from "./routes/users.js";
 import authRoutes from "./routes/auth.js";
 import cookieParser from "cookie-parser";
+import tweetRoutes from "./routes/tweet.js";
 
 const app = express();
 const PORT = 8000;
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("api/tweet", tweetRoutes);
 
 app.listen(PORT, (req, res) => {
   connect();

@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import "./App.css";
-import Home from "./pages/Home/Home";
-import Profile from "./pages/Profile/Profile";
-import Explore from "./pages/Explore/Explore";
-import Navbar from "./components/Navbar/Navbar";
-import Signin from "./pages/Signin/Signin";
+import Profile from "./pages/Profile";
+import Explore from "./pages/Explore";
+import Navbar from "./components/Navbar";
+import Signin from "./pages/Signin";
+import Home from "./pages/Home";
 
 const Layout = () => {
   return (

@@ -48,3 +48,15 @@ first sign in jane account and crab access token pass it in header with access-t
 curl -X PUT http://localhost:8000/api/users/unfollow/<jane id> -d '{"id":"<jack id>
 
 ---
+
+to tweet we need a access token so we will sign in jane account to get it
+
+then curl -X POST http://localhost:8000/api/tweets/ -d '{"userId":"",description":".."}'
+
+---
+
+to recieve we dont need to send access token because verifyToken middle ware is not passes to router .
+
+curl -X GET http://localhost:8000/api/tweets/timeline/<Jane_id>
+
+---

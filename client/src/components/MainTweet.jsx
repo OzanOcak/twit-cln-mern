@@ -1,3 +1,5 @@
+import TimelineTweet from "./TimelineTweet";
+
 const MainTweet = () => {
   return (
     <div>
@@ -13,7 +15,7 @@ const MainTweet = () => {
           Tweet
         </button>
       </form>
-      MainTweet
+      <TimelineTweet />
     </div>
   );
 };

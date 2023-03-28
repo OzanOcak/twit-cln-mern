@@ -28,7 +28,7 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
-app.use("api/tweet", tweetRoutes);
+app.use("/api/tweets", tweetRoutes);
 
 app.listen(PORT, (req, res) => {
   connect();
